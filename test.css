@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #c5e4e7;
+  place-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.main-section {
+  width: fit-content;
+  height: fit-content;
+  background-color: #ffff;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: #959da533 0px 8px 24px;
+  padding: 1rem;
+  column-gap: 3rem;
+}
+label{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #76979a;
+}
+
+.input-section {
+  height: 100%;
+  width: fit-content;
+  padding: 2rem;
+  padding-left: 3rem;
+}
+.input-bill-section {
+  height: 2.5rem;
+  background-color: #f3f8fb;
+  display: flex;
+  place-items: center;
+  padding: 1.3rem;
+  border-radius: 0.3rem;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+.input-bill-section:hover {
+    outline: solid ;
+    outline-color: #2ABFAB;
+}
+.number-of-people-section:hover{
+    outline: solid ;
+    outline-color: #2ABFAB;
+}
+
+.input-bill-section input::placeholder, .number-of-people-section input::placeholder {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #99B7B9;
+}
+.tip-buttons {
+  display: grid;
+  /* grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 2.5rem 2.5rem; */
+    grid-template-columns: repeat(auto-fill, minmax(4rem, 2fr));
+
+  gap: 0.7rem;
+  margin-bottom: 2.5rem;
+}
+.tip-buttons button,
+.tip-buttons input {
+  border-radius: 0.3rem;
+  border: none;
+}
+.number-of-people-section {
+  height: 2.5rem;
+  background-color: #f3f8fb;
+  display: flex;
+  place-items: center;
+  padding: 1.3rem;
+  border-radius: 0.3rem;
+}
+.tip-buttons button {
+  background-color: #00474b;
+  font-weight: bold;
+  color: #ffff;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 2.5rem;
+
+}
+.tip-buttons button:hover {
+  color: #00474b;
+  background-color: #9fe8df;
+}
+.tip-buttons input::placeholder{
+    font-weight: bold;
+    font-size: 1rem;
+    padding-right: 0.4rem;
+
+}
+.output-section {
+  background-color: #00474b;
+  height: 100%;
+  width: 50%;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.reset-button{
+    margin-top: 7.5rem;
+    width: 95%;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    background-color: #276164;
+    border: none;
+    cursor: pointer;
+  font-size: 1rem;
+  height: 2.5rem;
+  font-weight: bold;
+  color: #00474b;
+
+
+}
+.reset-button:hover{
+    background-color: #9fe8df;
+}
+
+@media (max-width: 700px) {
+    .splitter-logo{
+     padding-top: 10rem;
+    }
+    .main-section {
+      flex-direction: column;
+      width: 100%;
+    }
+    .output-section{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+    .reset-button{
+        margin-top: 1rem;
+
+    }
+    .input-section {
+        height: fit-content;
+        width: 100%;
+        padding: 2rem;
+        padding-left: 3rem;
+      }
+      .tip-buttons {
+       
+          grid-template-columns: repeat(auto-fill, minmax(8rem, 2fr));
+      
+        gap: 0.7rem;
+        margin-bottom: 1rem;
+      }
+      .tip-buttons input::placeholder{
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding-right: 0.4rem;
+      }
+  }
